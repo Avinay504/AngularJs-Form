@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body ng-Controller="myController">          <!--  when passing to header whole div tag works-->
+
+<div >
+{{message}}
+
+</div>
+
+<div >
+{{message}}
+
+</div>
+
+
+
+<script>
+var myApp=angular.module("myModule",[]);          /** creating a moddule*/
+
+/**var myController=function($scope){
+	$scope.message="Hay avinay to angularJs";     /** creaing a controller*/
+	
+/**};
+/** myApp.controller("myController",myController);/** registering the controller with module*/
+  
+ myApp.controller("myController",function($scope){/**creating the controller and registering with the module in same line*/ 
+		$scope.message="Hay avinay to angularJs"; 
+ });
+  </script>
+
+</body>
+</html>

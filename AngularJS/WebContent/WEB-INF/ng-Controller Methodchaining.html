@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body >          <!--  when passing to header whole div tag works-->
+<div ng-Controller="myController">
+
+<div >
+FirstName:{{employee.firstname}}
+</div>
+<div >
+LastName:{{employee.lastname}}
+</div>
+<div >
+Gender:{{employee.gender}}
+</div>
+</div>
+<script>
+var myApp=angular                                 
+                .module("myModule",[])                     /**Method chaining in angular js*/
+                .controller("myController",function($scope){
+            		var employee={
+            		 firstname:"Avinay",
+                     lastname:"singh",
+                     gender:"Male"
+             };
+             $scope.employee=employee;
+             });
+  </script>
+
+</body>
+</html>
