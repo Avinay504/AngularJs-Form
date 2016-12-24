@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <title>This is directive test</title>
+        <link rel="stylesheet" href="SideBar.css">
+        <script src="lib/angular.js"></script>
+    
+    </head>
+    <body>
+        <div class="container">
+            <div ng-controller="SidebarController" class="sidebar" sidebar-directive="state">
+                <a href="#" id="navigation-toggle" ng-click="toggleState()">Manage</a>
+                <ul class="navigation">
+                    <li class="navigation-items"> <a href="/">Blogs</a> </li>
+                    <li class="navigation-items"> <a href="/">Jobs</a> </li>
+                    <li class="navigation-items"> <a href="/">Users</a> </li>
+
+                </ul>
+            </div>
+        </div>
+        
+    
+     <script src="myApp.js"></script>    
+    <script src="SidebarController.js"></script>
+      <script src="SidebarDirective.js"></script>
+   
+    </body>
+</html>
