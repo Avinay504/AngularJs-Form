@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<p>Click the table headers to change the sorting order:</p>
+
+<div ng-app="myApp" ng-controller="productCtrl">
+
+<table border="1" width="100%">
+<tr>
+<th ng-click="orderByMe('name')">Name</th>
+<th ng-click="orderByMe('category')">Category</th>
+<th ng-click="orderByMe('price')">Price</th>
+</tr>
+<tr ng-repeat="x in products | orderBy:myOrderBy">
+<td>{{x.name}}</td>
+<td>{{x.category}}</td>
+<td>{{x.price}}</td>
+</tr>
+</table>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('productCtrl', function($scope) {
+	$scope.products = [
+	                    { 'name':'iPhone',
+	                      'category': 'Mobile',
+	                      'price': 50000},
+	                    { 'name':'Dell',
+	                      'category': 'Laptop',
+	                      'price': 40000},
+	                    { 'name':'Nike',
+	                      'category': 'Shoe',
+	                      'price': 2000},
+	                	{ 'name':'Godrej refrigerator',
+	                      'category': 'Electronics',
+	                      'price': 2000}
+	                    	
+	                    ];
+    $scope.orderByMe = function(x) {
+        $scope.myOrderBy = x;
+    }
+});
+</script>
+
+</body>
+</html>

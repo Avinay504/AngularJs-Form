@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+
+<input type="number" ng-model="price">
+
+
+<p ng-show="price<500">There is no Cash on Delivery is available</p>
+
+<p ng-hide="price<10000">You will get 10% discount</p>
+
+</div> 
+
+</body>
+</html>

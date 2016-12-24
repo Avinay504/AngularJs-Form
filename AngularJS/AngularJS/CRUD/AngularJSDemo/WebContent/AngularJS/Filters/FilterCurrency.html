@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+<!-- default is dollor  currency:"&euro; currency:"&#8377 -->
+<div ng-app="myApp" ng-controller="costCtrl">
+
+<h1>Price: {{ price | currency:"&euro;" }}</h1>
+{{price}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.price = 58;
+});
+</script>
+
+
+</body>
+</html>

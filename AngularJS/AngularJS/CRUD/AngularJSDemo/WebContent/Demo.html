@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body ng-app="shoppingCart" ng-controller="productController">
+
+<ul>
+
+<li ng-repeat = " prd in products " >
+
+ID:	{{prd.pid}}   <br>
+Name:	{{prd.pName}}<br>
+Price:	{{prd.price}}
+
+</li>
+
+</ul>
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript">
+	var app = angular.module('shoppingCart', []);
+
+	app.controller('productController', function($scope) {
+
+		$scope.products = [ 
+		
+		{'pid':'PRD001' , 'pName':'PRDName001', 'price':500  },
+		{'pid':'PRD002' , 'pName':'PRDName002', 'price':600  },
+		{'pid':'PRD003' , 'pName':'PRDName003', 'price':700  }
+		
+		 ]
+
+	});
+</script>
+</html>

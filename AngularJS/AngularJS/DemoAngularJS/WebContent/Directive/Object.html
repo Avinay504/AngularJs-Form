@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="products=
+                      [ {
+                        id:101,
+                         name:'Laptop', 
+                         price:5000
+                       },
+                       
+                       {
+                        id:101,
+                         name:'Laptop', 
+                         price:5000
+                       },
+                       
+                       {
+                        id:101,
+                         name:'Laptop', 
+                         price:5000
+                       },
+                       ]">
+
+
+Search of a product <input type="text" ng-model="searchText">
+
+<ul>
+ 
+   <li ng-repeat="prd in products | filter:searchText">
+ Product ID :  {{ prd.id}} <br>
+  Product Name :  {{ prd.name}}  <br>
+   Product Price :  {{ prd.price}} <br>
+  
+  
+  
+  
+  </li>
+</ul>
+
+
+
+</div>
+
+</body>
+</html>

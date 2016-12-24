@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+Please select Category
+<select ng-model="selectedName" ng-options="category for category in categories">
+</select>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.categories = ["Electronics", "Mobile", "HouseKeeping"];
+});
+</script>
+
+
+
+</body>
+</html>

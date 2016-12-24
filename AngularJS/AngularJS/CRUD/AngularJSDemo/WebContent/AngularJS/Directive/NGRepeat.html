@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="categories=['Category1','Category2','Category3']">
+  <p>Looping with ng-repeat:</p>
+  <ul>
+    <li ng-repeat="c in categories">
+      {{ c}}
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

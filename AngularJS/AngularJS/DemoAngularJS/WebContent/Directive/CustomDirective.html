@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" this-is-my-own-directive></div>
+
+
+<script>
+var app = angular.module("myApp", []);
+
+app.directive("thisIsMyOwnDirective", function() {
+    return {
+        template : "This is my own directive!"
+    };
+});
+</script>
+
+</body>
+</html>

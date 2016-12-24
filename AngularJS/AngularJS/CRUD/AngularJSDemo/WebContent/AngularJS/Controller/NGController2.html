@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body ng-app="myApp"  ng-controller="myCtrl">
+
+First Name = {{firstName}}
+Last Name = {{lastName}}
+Full Name = {{fullName}}
+
+
+
+
+
+
+<script>
+
+var app=angular.module("myApp",[]);
+app.controller("myCtrl",function($scope)
+		{
+	
+	       $scope.firstName="Jaya"
+	       $scope.lastName="Prasad"
+	       $scope.fullName = function()
+	       {
+	    	   return $scope.firstName+scope.lastName
+	       }
+	
+		}
+		
+		
+		);
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body ng-app="myApp">
+
+<p>Before Controller </p>
+First Name: {{firstName}}
+Last Name :{{lastName}}
+
+<div ng-controller="myCtrl">
+
+<p>In Controller</p>
+First Name:{{firstName}}
+Last Name{{lastName}}
+
+</div>
+
+<p>After Controller </p>
+First Name:{{firstName}}
+Last Name{{lastName}}
+
+<script>
+var app = angular.module('myApp', []);
+
+app.controller('myCtrl', function($scope, $rootScope) {
+    $scope.firstName = "Abbas";
+    $rootScope.lastName = "MD"
+});
+</script>
+
+	
+</body>
+</html>

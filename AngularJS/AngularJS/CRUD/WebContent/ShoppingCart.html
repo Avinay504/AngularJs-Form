@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="shoppingCartApp">
+<head>
+<title>Search Table - Filter Example</title>
+
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+	
+	
+<script src="ProductController.js"></script>
+
+</head>
+<!-- Controller name goes here -->
+<body ng-controller="ProductCtrl">
+
+Search Product : <input type="text" ng-model="searchKeyword">
+
+
+	<table class="table">
+		<tr>
+			<th>Name</th>
+			<th>Category</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+		<tr ng-repeat="product in products  | filter: searchKeyword ">
+			<td>{{product.name}}</td>
+			<td>{{product.category}}</td>
+			<td>{{product.price}}</td>
+			<td><input type="button" value="Remove" class="btn btn-primary"
+				ng-click="removeRow(product.name)" /></td>
+				<td>
+				<td><input type="button" value="Update" class="btn btn-primary"
+				ng-click="updateRow(product.name, product.category, product.price)" /></td>
+				<td>
+				
+				
+		</tr>
+		
+	</table>
+	
+	<input type="text" ng-model="u_name">
+	<input type="text" ng-model="u_category">
+	<input type="text" ng-model="u_price">
+	
+	
+	<input type="button" value="Add" class="btn btn-primary"
+				ng-click="addRow()" />
+	
+		
+		
+</body>
+</html>
