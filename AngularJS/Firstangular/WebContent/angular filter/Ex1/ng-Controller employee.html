@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="myModule">
+    <head>
+       <script src="lib/angular.js"></script>
+       <script src="myApp.js"></script>
+       <link href="app.css" rel="stylesheet"/>
+    </head>
+    <body >
+    <div  ng-controller="myController">
+    Rows To Dispaly:<input type="text" step="1" min="0" max="5" ng-model="rowlmit"/>
+    <br/><br/>
+        <table>
+           <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Date of Birth</th>
+                      <th>Gender</th>
+                      <th>Salary(number)</th>
+                      <th>Salary(currency)</th>
+                  </tr>
+           </thead>
+           <tbody>
+                 <tr ng-repeat="employee in employees|limit to:rowlmit">
+                 <td>{{employee.name |uppercase}}</td>
+                 <td>{{emoloyee.dateofbirth |date="dd/MM/yyyy"}}</td>
+                 <td>{{employee.gender |lowercase}}</td>
+                 <td>{{employee.salary |number:2}}</td>
+                 <td>{{employee.salary |currency}}</td>
+                </tr>
+           </tbody>
+    </table>
+    </div>
+        
+    </body>
+</html>

@@ -1,0 +1,17 @@
+body{
+	
+	font-family:Arial;
+}
+table={
+	border-collapse:collapse;
+	}
+
+td{
+	border:1px solid black;
+	padding:5Px;
+}
+th{ 
+	border:1px solid black;
+	padding:5px;
+	text-align:left;
+}
